@@ -47,7 +47,7 @@ function generateRandomNumber() {
 
 function printTargetNumber() {
 	generateRandomNumber();
-	$("#targetNumber").html(randomTargetNumber)
+	$("#targetNumber").html("Target Number: " + randomTargetNumber).css("font-size", "60px");
 }
 
 

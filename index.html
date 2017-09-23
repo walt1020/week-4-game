@@ -1,39 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
 <head>
 	<title>Crystal Collector</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	</script>
+	<style>
+	@import url('https://fonts.googleapis.com/css?family=Lobster');
+	</style>
+	<meta charset="utf-8">
+	<style>
+	@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+	</style>
 </head>
 <body>
-<div id = "header">Crystal Collector!</div>
+<div id="container">
 
-<div id = "instructions">
-	<p>You will be given a random number at the start of the game</p>
-	<p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score</p>
-	<p>You win the game by matching your total score with the random number. You lose if your total score goes above the random number</p>
-	<p>The value of each crystal is hidden from you until you click on it</p>
-	<p>Each time when the game starts it will change the value of each crystal, so it's not a memorization game all the time!</p>
+	<div id = "header"> <p id="headerText">Crystal Collector!</p> </div>
+
+	<div id = "instructions">
+		<p class = "info">You will be given a random number at the start of the game</p>
+		<p class = "info">There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score</p>
+		<p class = "info">You win the game by matching your total score with the random number. You lose if your total score goes above the random number</p>
+		<p class = "info">The value of each crystal is hidden from you until you click on it</p>
+		<p class = "info">Each time when the game starts it will change the value of each crystal, so it's not a memorization game all the time!</p>
+	</div>
+
+	<div id = "targetNumber"></div>
+
+	<div id = "winsAndLosses">
+		<p class="wins">Wins: 0</p>
+		<p class="losses">Losses: 0</p>
+	</div>
+
+	<div id="crystalBox">
+		<img id="blueCrystal" src="assets/images/Blue Crystal.jpeg" alt="blue crystal">
+		<img id="greenCrystal" src="assets/images/Green Crystal.jpg" alt="green crystal">
+		<img id="yellowCrystal" src="assets/images/Yellow Crystal.jpg" alt="yellow crystal">
+		<img id="redCrystal" src="assets/images/Red Crystal.jpg" alt="red crystal">
+	</div>
+
+	<div id="totalScore">Total Score: </div>
+
+	<div id="scoreShown"></div>
+
 </div>
-
-<div id = "targetNumber"></div>
-
-<div id = "winsAndLosses">
-	<p class="wins">Wins:</p>
-	<p class="losses">Losses:</p>
-</div>
-
-<div id="crystalBox">
-	<img id="blueCrystal" src="assets/images/Blue Crystal.jpeg" alt="blue crystal">
-	<img id="greenCrystal" src="assets/images/Green Crystal.jpg" alt="green crystal">
-	<img id="yellowCrystal" src="assets/images/Yellow Crystal.jpg" alt="yellow crystal">
-	<img id="redCrystal" src="assets/images/Red Crystal.jpg" alt="red crystal">
-</div>
-
-<div id="totalScore"></div>
-
-<div id="scoreShown"></div>
 
 <script type="text/javascript" src="assets/javascript/game.js"></script>
 
